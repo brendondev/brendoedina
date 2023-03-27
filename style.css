@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-image: url(bg.png);
+  background-repeat: repeat;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+@font-face {
+  font-family: Shrikhand;
+  src: url(Shrikhand-Regular.ttf);
+}
+
+h1 {
+  font-family: "Shrikhand";
+  text-align: center;
+  color: #39af5b;
+  border-bottom: solid 10px #fff;
+}
+
+.header {
+  background-image: url(banner.png);
+  background-size: 100%;
+  width: 100%;
+  height: 65vh;
+  background-repeat: no-repeat;
+}
+
+/* BASIC CODE  
+  * ------------------ */
+*,
+div,
+p,
+img {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* MASONRY GRID 
+  * ------------------ */
+.css-masonry {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  column-gap: 1.5em;
+
+  margin: 1.5em;
+  padding: 0;
+  font-size: 0.85em;
+}
+
+/* ITEM 
+  * ------------------ */
+.item {
+  display: inline-block;
+  font-family: "Alata", sans-serif;
+  font-size: 1.8em;
+  background: #fff;
+  margin: 0 0 1em;
+  -webkit-transition: 1s ease all;
+  border: 5px solid #fff;
+  border-radius: 6px;
+  overflow: hidden; /* to affect the inner elements with the radius */
+}
+
+.item img {
+  max-width: 100%;
+  font-size: 0;
+  height: auto; /* to be sure to don't have a spacing after the img due to the inline block function */
+}
+
+.item-number {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #fdd961;
+  color: #39af5b;
+  font-family: "Shrikhand";
+  font-size: 0.5em;
+  display: flex; /* flex is for center verticaly and horizontaly the number */
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0 2px 2px 0; /* I display right and bottom padding because of the font who is not center par default : delete if you change the font */
+
+  position: absolute;
+  margin: 5px;
+}
+
+.item .title {
+  border: 0px solid blue;
+  padding: 10px 10px 14px;
+}
+
+.french {
+  color: grey;
+  font-size: 0.8em;
+}
+
+@media only screen and (max-width: 420px) {
+  .css-masonry {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 768px) {
+  .css-masonry {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+  .css-masonry {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  .css-masonry {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
