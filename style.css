@@ -115,6 +115,10 @@ img {
     -webkit-column-count: 1;
     column-count: 1;
   }
+  .header {
+    background-image: url(banner-mobile.png);
+    height: 50vh;
+  }
 }
 
 @media only screen and (min-width: 421px) and (max-width: 768px) {
